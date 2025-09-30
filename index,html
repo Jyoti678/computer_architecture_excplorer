@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Architecture Explorer</title>
+
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>Interactive Computer Architecture Explorer</header>
+
+  <!-- ===== Task 1: Functional Units ===== -->
+  <section id="task1">
+    <h2>Functional Units</h2>
+    <div class="container">
+      <!-- Input Unit Card -->
+      <div class="card">
+        <div class="card-header">Input Unit</div>
+        <div class="card-img">
+          <img src="images/input.png" alt="Input Unit">
+        </div>
+        <div class="card-body">
+          <p>The Input Unit allows data and instructions to enter the computer system from external devices.</p>
+          <p>Examples: Keyboard, Mouse, Scanner</p>
+        </div>
+      </div>
+
+      <!-- Output Unit Card -->
+      <div class="card">
+        <div class="card-header">Output Unit</div>
+        <div class="card-img">
+          <img src="images/output.png" alt="Output Unit">
+        </div>
+        <div class="card-body">
+          <p>The Output Unit provides results from the computer to external devices.</p>
+          <p>Examples: Monitor, Printer</p>
+        </div>
+      </div>
+
+      <!-- ALU Card -->
+      <div class="card">
+        <div class="card-header">ALU</div>
+        <div class="card-img">
+          <img src="images/alu.png" alt="ALU">
+        </div>
+        <div class="card-body">
+          <p>Arithmetic Logic Unit performs arithmetic and logical operations.</p>
+          <p>Examples: Addition, Subtraction, AND, OR operations</p>
+        </div>
+      </div>
+
+      <!-- Control Unit Card -->
+      <div class="card">
+        <div class="card-header">Control Unit</div>
+        <div class="card-img">
+          <img src="images/control.png" alt="Control Unit">
+        </div>
+        <div class="card-body">
+          <p>Controls and coordinates all units of the computer system.</p>
+          <p>Example: Instruction decoding, signal generation</p>
+        </div>
+      </div>
+
+      <!-- Memory Unit Card -->
+      <div class="card">
+        <div class="card-header">Memory Unit</div>
+        <div class="card-img">
+          <img src="images/memory.png" alt="Memory Unit">
+        </div>
+        <div class="card-body">
+          <p>Stores data, instructions, and results temporarily or permanently.</p>
+          <p>Examples: RAM, ROM, Cache</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Task 2: Von Neumann Architecture ===== -->
+  <section id="task2">
+    <h2>Von Neumann Architecture</h2>
+    <div class="von-container">
+      <div class="von-diagram">
+        <img src="images/von_neumann.png" alt="Von Neumann Architecture">
+      </div>
+      <div class="von-details">
+        <h3>Stepwise Flow:</h3>
+        <ol>
+          <li>Instruction fetched from memory.</li>
+          <li>Instruction decoded by Control Unit.</li>
+          <li>ALU executes the operation.</li>
+          <li>Result stored back to memory or output device.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+      
+     <!-- ===== Task 3: Floating Point & Bitwise ===== -->
+<section id="task3">
+  <h2>Floating Point & Bitwise Operations</h2>
+  <div class="container">
+
+    <!-- Floating Point Demo -->
+    <div class="card">
+      <div class="card-header">Floating Point Operations</div>
+      <div class="card-body">
+        <p>Enter two numbers:</p>
+        <input type="number" id="fp1" step="any" placeholder="Num1">
+        <input type="number" id="fp2" step="any" placeholder="Num2">
+        <button onclick="floatingAdd()">Add</button>
+        <button onclick="floatingSub()">Subtract</button>
+        <p id="fpResult"></p>
+        <p id="fpBinary"></p>
+        <p id="fpRounding"></p>
+        <!-- Example 16-bit floating point GIF -->
+        <div class="diagram">
+        <img src="images/fp16_example.gif" alt="Floating Point Example" width="400">
+        </div>
+    <!-- Bitwise Demo -->
+    <div class="card">
+      <div class="card-header">Bitwise Operations</div>
+      <div class="card-body">
+        <p>Enter two integers:</p>
+        <input type="number" id="bw1" placeholder="Num1">
+        <input type="number" id="bw2" placeholder="Num2">
+        <button onclick="bitwiseAND()">AND</button>
+        <button onclick="bitwiseOR()">OR</button>
+        <button onclick="bitwiseXOR()">XOR</button>
+        <button onclick="bitwiseNOT()">NOT Num1</button>
+        <button onclick="bitwiseShiftLeft()">Shift Left Num1</button>
+        <button onclick="bitwiseShiftRight()">Shift Right Num1</button>
+        <p id="bitwiseResult"></p>
+        <p id="bitwiseBinary"></p>
+        <!-- Example binary operation GIF -->
+        <div class="diagram">
+        <img src="images/bitwise_example.gif" alt="Bitwise Example" width="400">
+        </div>
+  </div>
+</section>
+
+
+
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
